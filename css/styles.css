@@ -958,7 +958,7 @@ img {
 
 .form-field-textarea::placeholder {
    font-size: 12px;
-   line-height: 14px;
+   line-height: 1.1;
    letter-spacing: 0.01em;
    color: rgba(117, 117, 117, 0.5);
    ;
@@ -966,21 +966,25 @@ img {
 
 .form-field-textarea:focus,
 .form-field-textarea:focus-visible {
+   font-size: 12px;
+   line-height: 1.1;
+   color: var(--main-text-color);
+
    border: 1px solid var(--accent-color);
    outline: none;
 }
 
 .form-field-terms {
    margin-top: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
 
    text-align: center;
 }
 
-.form-field-terms {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
+
 
 .checkbox {
    position: absolute;
@@ -991,28 +995,27 @@ img {
    padding: 0;
    clip: rect(0 0 0 0);
    overflow: hidden;
+
 }
 
 .checkbox-icon {
    display: inline-block;
    width: 16px;
    height: 15px;
-
+   background-color: var(--white-main-color);
    border: 2px solid var(--main-text-color);
    border-radius: 2px;
    fill: currentColor;
 
-   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .checkbox:checked+.checkbox-icon {
-   border: transparent;
+   border: 2px solid var(--accent-color);
    background-image: url(../img/icon-check.svg);
    background-color: var(--accent-color);
    background-origin: border-box;
-
-
 }
 
 .terms-label {
